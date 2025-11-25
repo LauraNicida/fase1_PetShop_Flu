@@ -5,7 +5,7 @@ function atualizarMensagemHorario() {
 
   const agora = new Date();
   const hora = agora.getHours();
-  let saudacao = "Bem-vinda(o) à PetStar!";
+  let saudacao = "Bem-vinda(o) à PetFlu!";
 
   if (hora >= 5 && hora < 12) {
     saudacao = "Bom dia! Bem-vinda(o) à PetShop Flu!";

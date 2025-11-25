@@ -8,11 +8,11 @@ function atualizarMensagemHorario() {
   let saudacao = "Bem-vinda(o) à PetStar!";
 
   if (hora >= 5 && hora < 12) {
-    saudacao = "Bom dia! Bem-vinda(o) à PetStar!";
+    saudacao = "Bom dia! Bem-vinda(o) à PetShop Flu!";
   } else if (hora >= 12 && hora < 18) {
-    saudacao = "Boa tarde! Bem-vinda(o) à PetStar!";
+    saudacao = "Boa tarde! Bem-vinda(o) à PetShop Flu!";
   } else {
-    saudacao = "Boa noite! Bem-vinda(o) à PetStar!";
+    saudacao = "Boa noite! Bem-vinda(o) à PetShop Flu!";
   }
 
   elemento.textContent = saudacao;

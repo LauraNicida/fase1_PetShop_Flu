@@ -1,15 +1,52 @@
-body {
-  font-family: Arial, Helvetica, sans-serif;
+:root {
+  --flu-green: #006633;
+  --flu-grena: #7F0019;
+  --flu-light: #f8f9fa;
 }
 
-/* Ajustes em títulos e espaçamentos */
-h1, h2, h3, h4 {
-  font-weight: 600;
+/* Layout geral */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ffffff;
+}
+
+/* Cores Fluminense */
+.bg-flu-grena {
+  background-color: var(--flu-grena) !important;
+}
+
+.bg-flu-green {
+  background-color: var(--flu-green) !important;
+}
+
+.text-flu-grena {
+  color: var(--flu-grena) !important;
+}
+
+.text-flu-green {
+  color: var(--flu-green) !important;
+}
+
+.border-flu {
+  border: 1px solid var(--flu-green) !important;
 }
 
 /* Navbar */
 .navbar-brand {
-  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+/* Botões personalizados */
+.btn-flu {
+  background-color: var(--flu-green);
+  border-color: var(--flu-green);
+  color: #ffffff;
+}
+
+.btn-flu:hover {
+  background-color: var(--flu-grena);
+  border-color: var(--flu-grena);
+  color: #ffffff;
 }
 
 /* Carrossel */
@@ -19,10 +56,11 @@ h1, h2, h3, h4 {
 }
 
 /* Formulário */
-form#formAgendamento {
-  background-color: #f8f9fa;
+.form-flu {
+  background-color: var(--flu-light);
   padding: 1.5rem;
   border-radius: 0.5rem;
+  border: 1px solid #dee2e6;
 }
 
 /* Footer */

@@ -40,7 +40,6 @@ function configurarFormularioAgendamento() {
   if (!form) return; // só existe em cadastro.html
 
   form.addEventListener("submit", function (event) {
-    // Aqui você pode colocar validações extras além do "required"
     const nomeCliente = document.getElementById("nomeCliente").value.trim();
     const nomePet = document.getElementById("nomePet").value.trim();
 
@@ -51,7 +50,7 @@ function configurarFormularioAgendamento() {
     }
 
     alert("Cadastro e agendamento enviados com sucesso! 🐾");
-    // Se quiser impedir o envio real (só pra simular), descomente:
+    // Se quiser impedir o envio real (só para teste), descomente:
     // event.preventDefault();
   });
 }

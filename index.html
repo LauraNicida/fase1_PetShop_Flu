@@ -1,128 +1,150 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PetFlu Petshop — Fase 1 (HTML puro)</title>
-  <meta name="description" content="Plataforma web mínima (Fase 1) do projeto de petshop: produtos e serviços sem CSS/JS.">
+  <title>PetStar - Petshop</title>
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+
+  <!-- Seu CSS -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <h1>PetFlu Petshop</h1>
-    <nav>
-      <a href="#produtos">Produtos</a> |
-      <a href="#servicos">Serviços</a> |
-      <a href="#contato">Contato</a>
-    </nav>
-    <hr>
+  <!-- Header / Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">PetStar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="menuPrincipal">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="produtos.html">Produtos</a></li>
+          <li class="nav-item"><a class="nav-link" href="servicos.html">Serviços</a></li>
+          <li class="nav-item"><a class="nav-link" href="cadastro.html">Cadastro e Agendamento</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Banner / Carrossel -->
+  <header class="container my-4">
+    <div id="carouselPetstar" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner rounded shadow">
+        <div class="carousel-item active">
+          <img src="imagens/banner1.jpg" class="d-block w-100"
+               alt="Cachorro tomando banho em banheira no petshop">
+          <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
+            <h5>Banho e Tosa com Carinho</h5>
+            <p>Seu pet limpo, cheiroso e feliz.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="imagens/banner2.jpg" class="d-block w-100"
+               alt="Gato recebendo carinho em consultório veterinário">
+          <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
+            <h5>Produtos Selecionados</h5>
+            <p>Rações, brinquedos e acessórios para todas as fases.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="imagens/banner3.jpg" class="d-block w-100"
+               alt="Funcionário do petshop buscando cachorro na casa do cliente">
+          <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
+            <h5>Tele-busca PetStar</h5>
+            <p>Buscamos e devolvemos seu melhor amigo em segurança.</p>
+          </div>
+        </div>
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselPetstar" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselPetstar" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+        <span class="visually-hidden">Próximo</span>
+      </button>
+    </div>
   </header>
 
-  <!-- PRODUTOS -->
-  <main>
-    <section id="produtos">
-      <h2>Produtos</h2>
-
-      <h3>Acessórios</h3>
-      <article>
-        <h4>Camisa Tricolor</h4>
-        <img src="assets/img/acessorios/camisa.png" alt="Camisa tricolor para cachorro" width="320">
-        <p>Camisa estilizada nas cores do clube, confortável e lavável.</p>
-        <p><strong>Preço:</strong> R$ 59,90</p>
-      </article>
-
-      <article>
-        <h4>Coleira Premium</h4>
-        <img src="assets/img/acessorios/coleira.png" alt="Coleira premium para cachorro" width="320">
-        <p>Coleira ajustável com fecho seguro e design elegante.</p>
-        <p><strong>Preço:</strong> R$ 49,90</p>
-      </article>
-
-      <h3>Rações e Petiscos</h3>
-      <article>
-        <h4>Ração Premium para Cães</h4>
-        <img src="assets/img/comida/racao.png" alt="Saco de ração premium para cães" width="320">
-        <p>Ração nutritiva e balanceada para cães adultos.</p>
-        <p><strong>Preço:</strong> R$ 129,00</p>
-      </article>
-
-      <article>
-        <h4>Ração Premium para Gatos</h4>
-        <img src="assets/img/comida/racao_gato.png" alt="Ração seca para gatos" width="320">
-        <p>Com taurina e ômega 3 para saúde do coração e dos pelos.</p>
-        <p><strong>Preço:</strong> R$ 109,00</p>
-      </article>
-
-      <h3>Higiene e Limpeza</h3>
-      <article>
-        <h4>Shampoo Neutro</h4>
-        <img src="assets/img/higiene/shampoo.png" alt="Frasco de shampoo neutro para pets" width="320">
-        <p>Limpeza suave e brilho do pelo. Indicado para banhos semanais.</p>
-        <p><strong>Preço:</strong> R$ 34,90</p>
-      </article>
-
-      <article>
-        <h4>Tapete Higiênico</h4>
-        <img src="assets/img/higiene/tapete.png" alt="Pacote de tapetes higiênicos" width="320">
-        <p>Alta absorção e controle de odor. Pacote com 30 unidades.</p>
-        <p><strong>Preço:</strong> R$ 59,90</p>
-      </article>
+  <!-- Seção de boas-vindas -->
+  <main class="container mb-5">
+    <section class="mb-4">
+      <h1 class="mb-3">Bem-vindo à PetStar</h1>
+      <p id="mensagemHorario" class="lead"></p>
+      <p>
+        A PetStar é um petshop focado no bem-estar dos animais de estimação,
+        oferecendo produtos selecionados e serviços de banho e tosa com
+        tele-busca ou atendimento no local.
+      </p>
     </section>
 
-    <hr>
+    <!-- Destaques rápidos -->
+    <section class="row">
+      <div class="col-md-4 mb-3">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Produtos</h5>
+            <p class="card-text">
+              Rações, brinquedos, acessórios e itens de higiene para cães e gatos.
+            </p>
+            <a href="produtos.html" class="btn btn-primary">Ver produtos</a>
+          </div>
+        </div>
+      </div>
 
-    <!-- SERVIÇOS -->
-    <section id="servicos">
-      <h2>Serviços</h2>
+      <div class="col-md-4 mb-3">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Serviços</h5>
+            <p class="card-text">
+              Banho e tosa com equipe especializada, com opção de tele-busca.
+            </p>
+            <a href="servicos.html" class="btn btn-primary">Ver serviços</a>
+          </div>
+        </div>
+      </div>
 
-      <article>
-        <h3>Banho</h3>
-        <img src="assets/img/services/banho.png" alt="Serviço de banho em cachorro" width="320">
-        <p>Banho com produtos neutros e secagem cuidadosa.</p>
-        <p><strong>Valor:</strong> R$ 55,00</p>
-      </article>
-
-      <article>
-        <h3>Tosa</h3>
-        <img src="assets/img/services/tosa.png" alt="Serviço de tosa em pet" width="320">
-        <p>Tosa higiênica ou completa — conforto em dia.</p>
-        <p><strong>Valor:</strong> R$ 85,00</p>
-      </article>
-
-      <article>
-        <h3>Banho + Tosa</h3>
-        <img src="assets/img/services/banho-tosa.png" alt="Serviço de banho e tosa" width="320">
-        <p>Combo completo: limpeza, corte e hidratação dos pelos.</p>
-        <p><strong>Valor:</strong> R$ 129,00</p>
-      </article>
-
-      <article>
-        <h3>Tele-busca (opcional)</h3>
-        <img src="assets/img/services/tele-busca.png" alt="Serviço de tele-busca de pets" width="320">
-        <p>Buscamos e devolvemos seu pet com segurança e carinho.</p>
-        <p><strong>Adicional:</strong> R$ 25,00</p>
-      </article>
-    </section>
-
-    <hr>
-
-    <!-- CONTATO -->
-    <section id="contato">
-      <h2>Contato</h2>
-      <p><strong>E-mail:</strong> contato@petflupetshop.com.br</p>
-      <p><strong>WhatsApp:</strong> +55 00 90000-0000</p>
-      <p><a href="https://github.com/LauraNicida/fase1_PetShop_Flu" target="_blank">Repositório no GitHub</a></p>
-      <p><a href="https://lauranicida.github.io/fase1_PetShop_Flu/" target="_blank">Versão publicada da Fase 1</a></p>
+      <div class="col-md-4 mb-3">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Cadastro e Agendamento</h5>
+            <p class="card-text">
+              Cadastre você e seu pet e faça o agendamento de banho e tosa.
+            </p>
+            <a href="cadastro.html" class="btn btn-primary">Ir para cadastro</a>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 
-  <hr>
-
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2025 PetFlu Petshop — Projeto acadêmico (Fase 1). Sem CSS/JS conforme enunciado.</p>
+  <!-- Footer -->
+  <footer class="bg-dark text-light py-3 mt-auto">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+      <p class="mb-1 mb-md-0">
+        &copy; 2024 PetStar Petshop – Projeto acadêmico. Todos os direitos reservados.
+      </p>
+      <p class="mb-0">
+        <span id="dataHora"></span>
+      </p>
+    </div>
   </footer>
 
+  <!-- Bootstrap JS -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">
+  </script>
+
+  <!-- Seu JS -->
+  <script src="js/script.js"></script>
 </body>
 </html>

@@ -61,9 +61,23 @@ body {
 }
 
 /* Carrossel */
+#carouselPetflu {
+  max-height: 340px;
+}
+
+/* As imagens respeitam essa altura e cortam o excesso */
 #carouselPetflu img {
-  max-height: 420px;
+  max-height: 340px;
+  width: 100%;
   object-fit: cover;
+}
+
+/* Em telas grandes, pode ficar um pouquinho maior */
+@media (min-width: 992px) {
+  #carouselPetflu,
+  #carouselPetflu img {
+    max-height: 400px;
+  }
 }
 
 /* Formulário */
